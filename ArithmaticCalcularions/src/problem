@@ -1,0 +1,36 @@
+Write a Java program to print the sum (addition), multiply, subtract, divide and remainder of two numbers.
+Test Data:
+Input first number: 125
+Input second number: 24
+Expected Output :
+125 + 24 = 149
+125 - 24 = 101
+125 x 24 = 3000
+125 / 24 = 5
+125 mod 24 = 5
+
+errors occored: 1
+
+here was the code i tried at the beginning
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input first number: ");
+        double num1 = in.nextDouble();
+        System.out.print("Input second number: ");
+        double num2 = in.nextDouble();
+        System.out.println(num1+" + "+num2+" = "+num1+num2);
+        System.out.println(num1+" - "+num2+" = "+num1-num2);
+        System.out.println(num1+" * "+num2+" = "+num1*num2);
+        System.out.println(num1+" / "+num2+" = "+num1/num2);
+        System.out.println(num1+" mod "+num2+" = "+num1%num2);
+    }
+}
+
+in this code, I get the following error
+operator "-" cannot be applied to 'java.lang.String', 'double'
+
+The reason is I was trying to subtract a string from a string
+The solution is to make the calculations first and then print the output
